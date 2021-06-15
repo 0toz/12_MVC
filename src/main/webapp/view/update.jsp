@@ -1,5 +1,5 @@
 <%@page import="com.ict.db.DAO"%> 
-<%@page import="com.ict.db.VO"%>
+<%@page import="com.ict.db.BVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 

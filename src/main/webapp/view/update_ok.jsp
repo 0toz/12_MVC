@@ -1,15 +1,15 @@
 <%@page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
 <%@page import="com.oreilly.servlet.MultipartRequest"%>
 <%@page import="com.ict.db.DAO"%> 
-<%@page import="com.ict.db.VO"%>
+<%@page import="com.ict.db.BVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	String path = request.getServletContext().getRealPath("/upload");
+String path = request.getServletContext().getRealPath("/upload");
 	MultipartRequest mr = 
-			new MultipartRequest(request,path,100*1024*1024,"utf-8",new DefaultFileRenamePolicy());
+	new MultipartRequest(request,path,100*1024*1024,"utf-8",new DefaultFileRenamePolicy());
 	
-	  VO vo = new VO();
+	  BVO vo = new BVO();
 	  vo.setIdx(mr.getParameter("idx"));
 	  vo.setName(mr.getParameter("name"));
 	  vo.setSubject(mr.getParameter("subject"));
